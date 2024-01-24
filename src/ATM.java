@@ -129,7 +129,6 @@ public class ATM {
     // Process transferring funds from one account to another
     public static void transferFunds(User theUser, Scanner sc) {
 
-        //Inits
         int fromAcct;
         int toAcct;
         double amount;
@@ -175,7 +174,6 @@ public class ATM {
     // Process a fund withdraw from an account
     public static void withdrawFunds(User theUser, Scanner sc) {
 
-        //Inits
         int fromAcct;
         double amount;
         double acctBal;
@@ -210,14 +208,13 @@ public class ATM {
                 System.out.println("Enter a memo: ");
                 memo = sc.nextLine();
 
-                // do the withdraw
+                // do withdraw
                 theUser.addAcctTransaction(fromAcct, -1 * amount, memo);
             }
 
         // Process a fund deposit to an account
         public static void depositFunds(User theUser, Scanner sc) {
 
-            //Inits
             int toAcct;
             double amount;
             double acctBal;
@@ -250,7 +247,7 @@ public class ATM {
             System.out.println("Enter a memo: ");
             memo = sc.nextLine();
 
-            // do the withdraw
+            // do withdraw
             theUser.addAcctTransaction(toAcct, amount, memo);
     }
 }

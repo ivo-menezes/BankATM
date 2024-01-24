@@ -2,10 +2,10 @@ import java.util.Date;
 
 public class Transaction {
 
-    private double amount;
-    private Date timestamp;
+    private final double amount;
+    private final Date timestamp;
     private String memo;
-    private Account inAccount; //Account in which transaction was performed
+    private final Account inAccount; //Account in which transaction was performed
 
     public Transaction(double amount, Account inAccount) {
 

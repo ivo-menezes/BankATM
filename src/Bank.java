@@ -3,9 +3,9 @@ import java.util.Random;
 
 public class Bank {
 
-    private String name;
-    private ArrayList<User> users;
-    private ArrayList<Account> accounts;
+    private final String name;
+    private final ArrayList<User> users;
+    private final ArrayList<Account> accounts;
 
     // Create a new Bank object with empty lists of users and accounts
     public Bank(String name) {

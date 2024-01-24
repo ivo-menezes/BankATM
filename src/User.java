@@ -4,11 +4,11 @@ import java.security.MessageDigest;
 
 public class User {
 
-    private String firstName;
-    private String lastName;
-    private String uuid;  // The ID number of the user
-    private byte pinHash[]; //The MD5 hash of the user's PIN
-    private ArrayList<Account> accounts; //List of accounts for this user
+    private final String firstName;
+    private final String lastName;
+    private final String uuid;  // The ID number of the user
+    private final byte[] pinHash; //The MD5 hash of the user's PIN
+    private final ArrayList<Account> accounts; //List of accounts for this user
 
 
     // Create a new user: first and last name, PIN and bank object that user is a customer
@@ -89,7 +89,13 @@ public class User {
         return this.accounts.get(acctIdx).getUUID();
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
     public void addAcctTransaction(int acctIdx, double amount, String memo) {
         this.accounts.get(acctIdx).addTransaction(amount, memo);
     }
+
+
 }

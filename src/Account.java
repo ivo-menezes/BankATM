@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Account {
 
-    private String name; // Account name
-    private String uuid; // Account ID number
-    private User holder; // User object that owns this account
-    private ArrayList<Transaction> transactions; // List of transactions in this account
+    private final String name; // Account name
+    private final String uuid; // Account ID number
+    private final User holder; // User object that owns this account
+    private final ArrayList<Transaction> transactions; // List of transactions in this account
 
     public Account(String name, User holder, Bank theBank) {
         // Set account name and holder
@@ -43,7 +43,6 @@ public class Account {
         return balance;
     }
 
-
     // Print transaction history of the account
     public void printTransHistory() {
 
@@ -60,5 +59,9 @@ public class Account {
         // Create new transaction object and add it to our list
         Transaction newTrans = new Transaction(amount, memo, this);
         this.transactions.add(newTrans);
+    }
+
+    public User getHolder() {
+        return holder;
     }
 }
